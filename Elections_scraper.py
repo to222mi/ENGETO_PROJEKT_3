@@ -1,15 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
 import sys
 import csv
 import requests 
 import bs4
-
-
-# In[2]:
 
 
 def stiahni_html(url: str) -> requests.models.Response:
@@ -22,9 +17,6 @@ def stiahni_html(url: str) -> requests.models.Response:
     return odpoved
 
 
-# In[3]:
-
-
 def zmen_html_na_text(doc: requests.models.Response) -> str:
     '''
     dokument typu requests.models.Response
@@ -32,9 +24,6 @@ def zmen_html_na_text(doc: requests.models.Response) -> str:
     '''
     text = doc.text
     return text
-
-
-# In[4]:
 
 
 def parsuj_html(text) -> bs4.BeautifulSoup:
@@ -45,9 +34,6 @@ def parsuj_html(text) -> bs4.BeautifulSoup:
     text, features="html.parser"
     )
     return formatovany_str
-
-
-# In[5]:
 
 
 def ziskaj_specificke_tagy(
@@ -64,9 +50,6 @@ def ziskaj_specificke_tagy(
     return tag
 
 
-# In[6]:
-
-
 def ziskaj_text_tagov(tagy: bs4.element.ResultSet) -> list:
     '''
     zo zoznamu tagov vybere text 
@@ -79,9 +62,6 @@ def ziskaj_text_tagov(tagy: bs4.element.ResultSet) -> list:
         
         texty.append(tag.get_text())
     return(texty)
-
-
-# In[7]:
 
 
 def ziskaj_odkazy_tagov(tagy:bs4.element.ResultSet) -> list:
@@ -98,9 +78,6 @@ def ziskaj_odkazy_tagov(tagy:bs4.element.ResultSet) -> list:
     return(odkazy)
 
 
-# In[8]:
-
-
 def ziskaj_specificky_tag(
     formatovany_text: bs4.BeautifulSoup,
     tag: str,
@@ -115,26 +92,6 @@ def ziskaj_specificky_tag(
     return tag
 
 
-# In[9]:
-
-
-def ziskaj_specificke_tagy(
-    formatovany_text: bs4.BeautifulSoup,
-    tag: str,
-    popis: dict
-) ->  bs4.element.ResultSet:
-    '''
-    pomocou metody find_all najde specifikovany tag
-    a ulozi do formatu bs4.element.ResultSet
-    '''
-    
-    tag: bs4.element.ResultSet = formatovany_text.find_all(f'{tag}', popis)
-    return tag
-
-
-# In[10]:
-
-
 def vytvor_dataframe(*args):
     '''
     pospaja listy do kompletnzch dat - list of lists
@@ -142,9 +99,6 @@ def vytvor_dataframe(*args):
     
     df = list(zip(*args))
     return df
-
-
-# In[11]:
 
 
 def uloz_csv(nazov_suboru: str, hlavicka: list, data: list)-> None:
@@ -160,9 +114,6 @@ def uloz_csv(nazov_suboru: str, hlavicka: list, data: list)-> None:
         subor.close()
 
 
-# In[12]:
-
-
 def definuj_hlavicku(zoznam: list)-> list:
     '''
     zadefinuje hlavicku do csv suboru ktory sa neskor vytvori
@@ -170,11 +121,6 @@ def definuj_hlavicku(zoznam: list)-> list:
     
     hlavicka: list = zoznam
     return hlavicka
-
-
-# In[13]:
-
-
 
 
 def hlavni(url: str, nazev_souboru: str)-> None:
