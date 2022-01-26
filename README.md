@@ -1,23 +1,23 @@
-#POPIS PROJEKTU
+# POPIS PROJEKTU
 
 Tento program slúži na extrahovanie výsledkov parlamentných volieb v ČR v roku 2017:
 [volby.cz](https://volby.cz/pls/ps2017nss/ps3?xjazyk=CZ"_https://volby.cz/pls/ps2017nss/ps3?xjazyk=CZ_")
 
 
-#INŠTALÁCIA KNIŽNÍC
+# INŠTALÁCIA KNIŽNÍC
 
 Knižnice, ktoré sú potrebné k spusteniu tohto programu sú uložené v súbore requirements.txt
 V novom virtuálnom prostredí s nainštalovaným manažérom spustím príkazom:
 
-pip install -r requirements.txt
+**pip install -r requirements.txt**
 
-#SPÚŠŤANIE PRGRAMU
+# SPÚŠŤANIE PRGRAMU
 
 Program Election_scraper.py sa spúšťa v príkazovom riadku spolu s dvoma povinnými argumentmi:
 
-python Elections_scraper.py <odkaz-na-uzemny-celok> <nazov-vysledneho-suboru>
+**python Elections_scraper.py <odkaz-na-uzemny-celok> <nazov-vysledneho-suboru>**
 
-#UKÁŽKA PROJEKTU
+# UKÁŽKA PROJEKTU
 
 ukážka pre územnú úroveň Mělník:
 
