@@ -21,7 +21,6 @@ Program elections_scraper.py sa spúšťa v príkazovom riadku spolu s dvoma pov
 
 ukážka pre územnú úroveň Mělník:
 
-STAHUJEM DATA Z URL: https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2106\
+STAHUJEM DATA Z URL: https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2106 \
 UKLADAM DO SUBORU: vysledky_melnik.csv\
 UKONCUJEM PROGRAM !
-
