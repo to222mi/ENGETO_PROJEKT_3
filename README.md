@@ -15,13 +15,13 @@ V novom virtuálnom prostredí s nainštalovaným manažérom spustím príkazom
 
 Program elections_scraper.py sa spúšťa v príkazovom riadku spolu s dvoma povinnými argumentmi:
 
-python elections_scraper.py <odkaz-na-uzemny-celok> <nazov-vysledneho-suboru>
+**python elections_scraper.py (odkaz-na-uzemny-celok) (nazov-vysledneho-suboru)**
 
 ## UKÁŽKA PROJEKTU
 
 ukážka pre územnú úroveň Mělník:
 
-STAHUJEM DATA Z URL: https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2106
-UKLADAM DO SUBORU: vysledky_melnik.csv
+STAHUJEM DATA Z URL: https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2106\
+UKLADAM DO SUBORU: vysledky_melnik.csv\
 UKONCUJEM PROGRAM !
 
